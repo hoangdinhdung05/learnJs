@@ -59,15 +59,34 @@ console.log(message);
 //fuction trong js
 
 //check snt
-function isSnt(n) {
+// function isSnt(n) {
 
-    if(n < 2) return false;
-    for(let i = 2; i <= Math.sqrt(n); i++) {
-        if(n % i === 0) return false;
-    }
-    return n > 1;
+//     if(n < 2) return false;
+//     for(let i = 2; i <= Math.sqrt(n); i++) {
+//         if(n % i === 0) return false;
+//     }
+//     return n > 1;
+// }
+
+// let a = 1;
+// let message = isSnt(a) ? "A là một số nguyên tố" : "A không phải một số nguyên tố";
+// console.log(message);
+
+
+//CallBack function: Hàm gọi lại: có nghĩa là hàm được truyền với tham số rồi được gọi lại từ 1 hàm khác
+
+function hello(name) {
+    console.log("Hello " + name);
 }
 
-let a = 1;
-let message = isSnt(a) ? "A là một số nguyên tố" : "A không phải một số nguyên tố";
-console.log(message);
+function getName(callback) {
+    let name = "Dũng";
+    setTimeout(function () {
+        callback(name); // dùng callback ở đây
+    }, 2000);
+}
+
+getName(hello);
+
+
+//TODO: Tìm hiểu sâu về callback, callback hell, Promise và async/await.
