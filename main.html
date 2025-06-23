@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>To-Do List App</title>
+  <link rel="stylesheet" href="main.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>📝 To-Do List</h1>
+
+    <!-- Nhập công việc mới -->
+    <div class="add-task">
+      <input type="text" id="task-input" placeholder="Nhập công việc..." />
+      <button id="add-task-btn">Thêm</button>
+    </div>
+
+    <!-- Tìm kiếm -->
+    <div class="search-bar">
+      <input type="text" id="search-input" placeholder="Tìm kiếm công việc..." />
+    </div>
+
+    <!-- Bộ lọc -->
+    <div class="filters">
+      <button class="filter-btn active" data-filter="all">Tất cả</button>
+      <button class="filter-btn" data-filter="active">Chưa hoàn thành</button>
+      <button class="filter-btn" data-filter="completed">Hoàn thành</button>
+    </div>
+
+    <!-- Danh sách công việc -->
+    <ul id="task-list" class="task-list">
+      <!-- Các công việc sẽ được render tại đây bằng JavaScript -->
+    </ul>
+  </div>
+
+  <script src="main.js"></script>
+</body>
+</html>
